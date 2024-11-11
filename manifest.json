@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Speedify",
+  "description": "Play YouTube videos at custom speed",
+  "version": "1.0",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "main/main.html",
+    "default_icon": "images/speedify.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": ["https://youtube.com/*"]
+    }
+  ]
+}
